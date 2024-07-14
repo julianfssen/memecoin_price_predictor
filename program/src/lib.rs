@@ -4,6 +4,8 @@ use solana_program::{
     pubkey::Pubkey
 };
 
+pub mod state;
+
 solana_program::entrypoint!(process_instruction);
 
 #[cfg(not(feature = "no-entrypoint"))]
