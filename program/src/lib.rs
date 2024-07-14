@@ -1,18 +1,4 @@
-use solana_program::{
-    account_info::AccountInfo,
-    entrypoint::ProgramResult,
-    pubkey::Pubkey
-};
-
+pub mod entrypoint;
+pub mod instruction;
+pub mod processor;
 pub mod state;
-
-solana_program::entrypoint!(process_instruction);
-
-#[cfg(not(feature = "no-entrypoint"))]
-fn process_instruction(
-    program_id: &Pubkey,
-    accounts: &[AccountInfo],
-    instruction_data: &[u8],
-) -> ProgramResult {
-    Ok(())
-}
